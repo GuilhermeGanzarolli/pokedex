@@ -1,0 +1,62 @@
+*{
+    font-family: Fonte;
+    box-sizing: border-box;
+}
+
+#conteudo{
+    margin: .8rem;
+}
+
+#lista-de-pokemons{
+    display: flex;
+    justify-content: center;
+}
+
+#pokemons{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pokemon{
+    color: white;
+    list-style: none;
+    background-color: rgb(36, 177, 66);
+    margin: .8rem;
+    padding: 1rem;
+    border-radius: 12px;
+    min-width: 167px;
+    max-width: 385px;
+}
+
+.nomeEnumero{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.habilidades{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0px 0px 0px;
+
+}
+
+.habilidades li{
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.301);
+    padding: 8px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.AtaqueEImg{
+    display: flex;
+}
+
+.img-pokemon{
+    max-width: 100%;
+    width: 50%;
+    margin-left: 5%;
+}
