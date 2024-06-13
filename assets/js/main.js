@@ -4,36 +4,37 @@
 //const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
 
 
-function convertPokemonToHtml(pokemon) {
-    return`
-    <li class="pokemon">               
-        <div class="nomeEnumero">
-            <span>${pokemon.name}</span>
-            <span>#002</span>
-        </div>
-        <div class="AtaqueEImg">
-            <ul class="habilidades">
-                <li>grama</li><br>
-                <li>veneno</li>
-            </ul>
-            <img class="img-pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
-        </div>
-    </li>
-    `
+const pokemonListNoHtml = document.getElementById('pokemons')
+const btncarregar = document.getElementById('loadMore')
+const limit = 12
+let offset = 0
+
+
+function CarregarMaisPokemons() {
+    poke_api.getPokemons(offset, limit).then((lista = [])=>{//Neste momento eu tenho a lista com os pokemons
+        const novoHtml = lista.map((pokemon) => 
+            `
+                <li class="pokemon ${pokemon.type}">               
+                    <div class="nomeEnumero">
+                        <span>${pokemon.name}</span>
+                        <span>#${pokemon.number}</span>
+                    </div>
+                    <div class="AtaqueEImg">
+                        <ul class="habilidades ">
+                            ${pokemon.types.map((type) => `<li>${type}</li>`).join('<br>')}
+                        </ul>
+                        <img class="img-pokemon" src="${pokemon.photo}" alt="${pokemon.name}">
+                    </div>
+                </li>
+            `
+        ).join('')
+        pokemonListNoHtml.innerHTML+=novoHtml
+    })
 }
 
-const pokemonListNoHtml = document.getElementById('pokemons')
+CarregarMaisPokemons(offset,limit)
 
-
-poke_api.getPokemons().then((lista = [])=>{//Neste momento eu tenho a lista com os pokemons
-
-    //const novaLista = lista.map((pokemon)=>{
-    //    return convertPokemonToHtml(pokemon)
-    //})
-//
-//
-    //const newHtml=novaLista.join('')
-    //pokemonListNoHtml.innerHTML+=newHtml
-
-    pokemonListNoHtml.innerHTML+=lista.map(convertPokemonToHtml).join('')
+btncarregar.addEventListener('click', ()=>{
+    offset+=limit
+    CarregarMaisPokemons(offset,limit)
 })
