@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Normalize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Css-->
+    <link rel="stylesheet" href="assets/css/paginaPokemon.css">
+    <link rel="stylesheet" href="assets/css/fontes.css">
+</head>
+<body>
+    
+    <section id="conteudo">
+        <div id="area-pokemon">
+            <div id="area-nome">
+                <span >nome</span>
+                <span >#1</span>
+            </div>
+            <div id="area-img">
+                <img id="img-pokemon"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" width="40%" alt="">
+            </div>
+        </div>
+        <div id="area-status">
+            
+            <div id="lista-status">
+                <div class="elemento">
+                    <span class="elemento-e-valor">HP <span class="valor">100</span></span> 
+                    <span class="barra-de-progresso">
+                        <div class="progresso"></div>
+                    </span>
+                </div>
+                <div class="elemento">
+                    <span class="elemento-e-valor">Ataque <span class="valor">100</span></span> 
+                    <span class="barra-de-progresso">
+                        <div class="progresso"></div>
+                    </span>
+                </div>
+                <div class="elemento">
+                    <span class="elemento-e-valor">Defesa <span class="valor">100</span></span> 
+                    <span class="barra-de-progresso">
+                        <div class="progresso"></div>
+                    </span>
+                </div>
+                <div class="elemento">
+                    <span class="elemento-e-valor">Sp. Ataq <span class="valor">100</span></span>  
+                    <span class="barra-de-progresso">
+                        <div class="progresso"></div>
+                    </span>
+                </div>
+                <div class="elemento">
+                    <span class="elemento-e-valor">Sp. Def <span class="valor">100</span></span>  
+                    <span class="barra-de-progresso">
+                        <div class="progresso"></div>
+                    </span>
+                </div>
+                <div class="elemento">
+                    <span class="elemento-e-valor">Velocidade <span class="valor">100</span></span> 
+                    <span class="barra-de-progresso">
+                        <div class="progresso"></div>
+                    </span>
+                </div>
+            </div>    
+
+        </div>
+    </section>
+
+
+    <script src="assets/js/pokemon-model.js"></script>
+    <script src="assets/js/pokeApi.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

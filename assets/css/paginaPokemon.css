@@ -1,0 +1,97 @@
+*{
+    font-family: Fonte;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+}
+
+#conteudo{
+    margin: .8rem;
+    background-color: rgb(3, 146, 3);
+    border-radius: 15px;
+    width: 40rem;
+    height: 45rem;
+    padding: 15px;
+}
+
+#area-pokemon{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#area-nome{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+#area-img{
+
+    display: flex;
+    justify-content: center;
+}
+
+#img-pokemon{
+    min-width: 20rem;
+}
+
+#area-status{
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+#lista-status{
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.elemento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elemento-e-valor{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.valor{
+    color: rgb(116, 116, 116);
+    font-weight: 100;
+}
+
+
+.barra-de-progresso{
+    display: inline-block;
+    background-color: rgb(199, 199, 199);
+    width: 150px;
+    height: 10px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.progresso{
+    background-color: rgb(3, 146, 3);
+    width: 50%;
+    height: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
