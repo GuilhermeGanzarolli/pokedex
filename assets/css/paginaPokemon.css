@@ -11,10 +11,8 @@ body{
 
 #conteudo{
     margin: .8rem;
-    background-color: rgb(3, 146, 3);
     border-radius: 15px;
     width: 40rem;
-    height: 45rem;
     padding: 15px;
 }
 
@@ -33,7 +31,6 @@ body{
 }
 
 #area-img{
-
     display: flex;
     justify-content: center;
 }
@@ -43,7 +40,6 @@ body{
 }
 
 #area-status{
-
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -88,10 +84,10 @@ body{
 }
 
 .progresso{
-    background-color: rgb(3, 146, 3);
-    width: 50%;
     height: 10px;
     border-radius: 10px;
     display: inline-block;
     margin-bottom: 5px;
 }
+
+
